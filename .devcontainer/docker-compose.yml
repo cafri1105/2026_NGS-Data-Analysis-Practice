@@ -1,0 +1,19 @@
+version: '3.8'
+services:
+  app:
+    image: mcr.microsoft.com/devcontainers/base:ubuntu
+    volumes:
+      - ..:/workspaces:cached
+    network_mode: bridge
+
+  minimap2:
+    image: staphb/minimap2:latest
+    container_name: minimap2_tool
+
+  samtools:
+    image: biocontainers/samtools:v1.9-4-deb_cv1
+    container_name: samtools_tool
+
+  varscan:
+    image: mgibio/varscan:v2.4.2
+    container_name: varscan_tool
