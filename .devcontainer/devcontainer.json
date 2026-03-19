@@ -9,5 +9,6 @@
         "ms-azuretools.vscode-docker"
       ]
     }
-  }
+  },
+  "postCreateCommand": "echo \"alias minimap2='docker run --rm -v $(pwd):/workspaces/${localWorkspaceFolderBasename}:/data staphb/minimap2:latest minimap2'\" >> ~/.bashrc && echo \"alias samtools='docker run --rm -v $(pwd):/workspaces/${localWorkspaceFolderBasename}:/data biocontainers/samtools:v1.9-4-deb_cv1 samtools'\" >> ~/.bashrc && echo \"alias varscan='docker run --rm -v $(pwd):/workspaces/${localWorkspaceFolderBasename}:/data mgibio/varscan:v2.4.2 varscan'\" >> ~/.bashrc"
 }
